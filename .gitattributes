@@ -16,3 +16,8 @@ tools/git/usr/share/misc/magic.mgc filter=lfs diff=lfs merge=lfs -text
 
 licenses/** -text
 /.github/scripts/*.json -text
+
+# Exclude bundled upstream software from this project's language statistics.
+runtime/pi/** linguist-vendored
+tools/node/** linguist-vendored
+tools/git/** linguist-vendored
