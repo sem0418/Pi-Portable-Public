@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-25",
+  "minimumVersions": {
+    "node": "24.22.1",
+    "git": "2.56.0.3"
+  },
+  "references": [
+    {
+      "component": "node",
+      "url": "https://nodejs.org/en/blog/vulnerability/october-2026-security-releases",
+      "reason": "October 21 security release, including compromised CA and dependency fixes."
+    },
+    {
+      "component": "git",
+      "url": "https://github.com/git-for-windows/git/releases/tag/v2.56.0.windows.3",
+      "reason": "October 22 security fix: eMudhra Intermediate CA Compromise and Git LFS CVE-2026-105803."
+    }
+  ],
+  "policy": "Static audited minimums for public packaging only. This does not discover/select/install upstream versions; use the existing Entry updater."
+}

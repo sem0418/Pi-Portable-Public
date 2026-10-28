@@ -1,0 +1,43 @@
+{
+    "schemaVersion":  1,
+    "projectVersion":  "1.1.1",
+    "builtAt":  "2026-10-16T14:08:33.069679+00:00",
+    "architecture":  "win-x64",
+    "components":  {
+                       "pi":  {
+                                  "name":  "pi",
+                                  "version":  "1.4.0",
+                                  "tag":  "v1.4.0",
+                                  "url":  "https://github.com/earendil-works/pi/releases/download/v1.4.0/pi-windows-x64.zip",
+                                  "filename":  "pi-windows-x64.zip",
+                                  "sha256":  "0f7256ea8bdac3af20012b94fdc1252a31cc6dc0d2f9b9eb539555d22e3e321b",
+                                  "size":  45136547,
+                                  "nodeRequirement":  "\u003e=22.19.0"
+                              },
+                       "node":  {
+                                    "name":  "node",
+                                    "version":  "24.22.1",
+                                    "tag":  "v24.22.1",
+                                    "url":  "https://nodejs.org/dist/v24.22.1/node-v24.22.1-win-x64.zip",
+                                    "filename":  "node-v24.22.1-win-x64.zip",
+                                    "sha256":  "d2046d28c2c3dcd211ac5145c0bf30e2047ef9dfb306693c8c6e2eccd8b95fa5",
+                                    "size":  62914560,
+                                    "npm":  "11.19.1"
+                                },
+                       "git":  {
+                                   "name":  "git",
+                                   "version":  "2.56.0.3",
+                                   "tag":  "v2.56.0.windows.3",
+                                   "url":  "https://github.com/git-for-windows/git/releases/download/v2.56.0.windows.3/PortableGit-2.56.0.3-64-bit.7z.exe",
+                                   "filename":  "PortableGit-2.56.0.3-64-bit.7z.exe",
+                                   "sha256":  "4fc27b779829a36df77911e3f4dea09c66c790dd6c5f7dfa3b6a5479f1fe354f",
+                                   "size":  60079112
+                               }
+                   },
+    "gitFirstRunSetup":  "Official PortableGit extraction and post-install completed on native Windows; the recorded Git inventory reflects initialized files. See docs/VALIDATION.md.",
+    "originalBuildWindowsAcceptance":  "not-executed",
+    "originalBuildGitFirstRunSetup":  "Official post-install.bat is completed automatically on first native Windows launch; not executed on Linux build host.",
+    "updatedAt":  "2026-10-25T03:38:28.9527764+00:00",
+    "windowsAcceptance":  "passed-native-GitHub-Actions-with-documented-skips",
+    "windowsAcceptanceRun":  "https://github.com/sem0418/Pi-Portable/actions/runs/40158818093"
+}

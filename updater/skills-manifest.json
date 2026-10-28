@@ -1,0 +1,95 @@
+{
+  "version": "1.0.0",
+  "files": [
+    {
+      "path": "disk-health/SKILL.md",
+      "size": 2864,
+      "sha256": "38c47555147362145b99ccbb7166b1583e69b7fe5a1db40a9ce283d0ea289114"
+    },
+    {
+      "path": "disk-health/scripts/Collect-DiskHealth.ps1",
+      "size": 2422,
+      "sha256": "370ed43388f16a087d9741da2a733fc6f577d790d2dd4c78ba53dcdb5657b329"
+    },
+    {
+      "path": "disk-health/scripts/Report.Common.ps1",
+      "size": 5869,
+      "sha256": "2d72055d523ac82fd5f86009757b3c77193ca7c26de079fea9adb69a621fab80"
+    },
+    {
+      "path": "file-organizer/SKILL.md",
+      "size": 3481,
+      "sha256": "1ca14cfd6904c27a4e43e06edfca700d3c1980a64114695cfb6e2f0ec71e1e64"
+    },
+    {
+      "path": "file-organizer/scripts/Invoke-FileOrganizer.ps1",
+      "size": 14708,
+      "sha256": "d1c67ec3308c06b583f1d8cd3c856bdd3c8b66e82c9353f0c9d0439400bf5c6e"
+    },
+    {
+      "path": "file-organizer/scripts/Report.Common.ps1",
+      "size": 5869,
+      "sha256": "2d72055d523ac82fd5f86009757b3c77193ca7c26de079fea9adb69a621fab80"
+    },
+    {
+      "path": "malware-triage/SKILL.md",
+      "size": 3244,
+      "sha256": "4eb4149d31ebe879c7d47a027729e60763efee1e6fff5b45bfe07730a8429099"
+    },
+    {
+      "path": "malware-triage/scripts/Collect-MalwareTriage.ps1",
+      "size": 3292,
+      "sha256": "4c38a25f61626c36155e2087ecab05fc06923088323514402604dce6ca4b517d"
+    },
+    {
+      "path": "malware-triage/scripts/Report.Common.ps1",
+      "size": 5869,
+      "sha256": "2d72055d523ac82fd5f86009757b3c77193ca7c26de079fea9adb69a621fab80"
+    },
+    {
+      "path": "network-troubleshooting/SKILL.md",
+      "size": 2789,
+      "sha256": "efde4296940fb5836e9481d6415174aaf068c1942935994f2006a632e2b822f3"
+    },
+    {
+      "path": "network-troubleshooting/scripts/Collect-Network.ps1",
+      "size": 2640,
+      "sha256": "1ced6665d872aca5e6798b38a117add57b72d6b4ed0d9824ca68e507db1649b0"
+    },
+    {
+      "path": "network-troubleshooting/scripts/Report.Common.ps1",
+      "size": 5869,
+      "sha256": "2d72055d523ac82fd5f86009757b3c77193ca7c26de079fea9adb69a621fab80"
+    },
+    {
+      "path": "windows-diagnostics/SKILL.md",
+      "size": 3003,
+      "sha256": "9fe24ab640f0ba949ac2449c42bb6b8453f588c0a65bed60d434454adfb5f2df"
+    },
+    {
+      "path": "windows-diagnostics/scripts/Collect-Diagnostics.ps1",
+      "size": 2150,
+      "sha256": "0c07db9a2b117715a4e759bba163da1e108e0e4038d07e2ecbc65e627dbd540e"
+    },
+    {
+      "path": "windows-diagnostics/scripts/Report.Common.ps1",
+      "size": 5869,
+      "sha256": "2d72055d523ac82fd5f86009757b3c77193ca7c26de079fea9adb69a621fab80"
+    },
+    {
+      "path": "windows-repair/SKILL.md",
+      "size": 3408,
+      "sha256": "0c981fe7111e6dc2aae8caf0ac7ef84f80f0438f282b4d296322e2a91e4eeedb"
+    },
+    {
+      "path": "windows-repair/scripts/Invoke-WindowsRepair.ps1",
+      "size": 2463,
+      "sha256": "bec92f3c43e4bbece4f7e792e79550eee736ab50be1a016afadfc83f21fb7f2e"
+    },
+    {
+      "path": "windows-repair/scripts/Report.Common.ps1",
+      "size": 5869,
+      "sha256": "2d72055d523ac82fd5f86009757b3c77193ca7c26de079fea9adb69a621fab80"
+    }
+  ]
+}

@@ -1,0 +1,271 @@
+{
+  "projectVersion": "1.1.1",
+  "scope": "Original project scripts/resources/launchers and exact publication inventories; excludes user data, upstream payloads and temporary engineering workflows",
+  "files": [
+    {
+      "path": ".github/scripts/Distribution.py",
+      "sha256": "344d2cd4b7d97f2b445e2d598d49d9b34e0d4a08d5312ec449729073fd528dd5",
+      "size": 28135
+    },
+    {
+      "path": ".github/scripts/Invoke-Validation.ps1",
+      "sha256": "0fac75e6289807074769808d36000a5453e6ef2e94adef7fcacc3e3d946314c5",
+      "size": 4984
+    },
+    {
+      "path": ".github/scripts/Publish-Update.ps1",
+      "sha256": "b45162d76c818c2714b3aeeffaf7cc5d5b4eb7d2c1677dba120d5f5c89111b44",
+      "size": 3310
+    },
+    {
+      "path": ".github/scripts/Test-PublicRelease.ps1",
+      "sha256": "fa85a12ae2c1fbac20a4dd4ff05bcd5998e40d0ef5fc323789b46eb7153a2339",
+      "size": 2543
+    },
+    {
+      "path": ".github/scripts/Update-Licenses.ps1",
+      "sha256": "1c2bc9ada3f5e67f28957c243a904138bf916d11555825b5965bbb8e96c1013d",
+      "size": 5769
+    },
+    {
+      "path": "licenses/corresponding-source.json",
+      "sha256": "f1c6a12a6b2222253b1aedbd14184fd437ac39e5f237f94407d488793ab53043",
+      "size": 252725
+    },
+    {
+      "path": "licenses/security-baseline.json",
+      "sha256": "616d9e05dafc32222ac264abb67e7cd1b24c91bc94510af4f6f15b29e274f0cc",
+      "size": 759
+    },
+    {
+      "path": "tests/Test-Core.ps1",
+      "sha256": "81c098ce0af577f9b29167536c36e2708283faa66d4c8843847a742687c5d2c7",
+      "size": 20993
+    },
+    {
+      "path": "tests/Test-Distribution.py",
+      "sha256": "bec59b4ab926cf43ac8b6b2a73b447094582ee4b62ad1795e46b9f3252fd5654",
+      "size": 11869
+    },
+    {
+      "path": "tests/Test-FileOrganizer.ps1",
+      "sha256": "c0233f19c77549f2f6a38e3ee0a4744852502aa251d9a0a9372ca6aa95071d12",
+      "size": 7507
+    },
+    {
+      "path": "tests/Test-LiveModel.ps1",
+      "sha256": "e48e4131679bf9a4e18b82ccc788259c7fd7fc7a86e5859a7fea9e5779cd4286",
+      "size": 3355
+    },
+    {
+      "path": "tests/Test-Package.ps1",
+      "sha256": "8455f7b703fb321d9bc1760bf8ee09c38f4b5d3e9b87edf93ac8b86a79925410",
+      "size": 4789
+    },
+    {
+      "path": "tests/Test-PiIntegration.cjs",
+      "sha256": "256c2ddf295cb9fa9758b4e7f2b35716b3cdcc631d2d70de5ffd0fb70e9bc025",
+      "size": 11416
+    },
+    {
+      "path": "tests/Test-ReleasePipeline.ps1",
+      "sha256": "3a5e7224b75596d537bdd421063cd3ebaa1075b5490f9380c6f86760e4815642",
+      "size": 13823
+    },
+    {
+      "path": "tests/Test-Windows.ps1",
+      "sha256": "eaf0d38498a3d543e9315e0a6c4ddeb616f16198bbf6cafa5bb02f10fb140694",
+      "size": 9758
+    },
+    {
+      "path": "updater/resources/defaults/AGENTS.md",
+      "sha256": "49df3fd1fe830935071a1508ed21d5478c5877349fb4d467221bc08e138c5fe4",
+      "size": 1830
+    },
+    {
+      "path": "updater/resources/defaults/models.example.json",
+      "sha256": "d801ecdabc0d90414c9ea1213182522eb7eae0781f3b0b3260f3f66010beecb0",
+      "size": 237
+    },
+    {
+      "path": "updater/resources/skills/disk-health/SKILL.md",
+      "sha256": "38c47555147362145b99ccbb7166b1583e69b7fe5a1db40a9ce283d0ea289114",
+      "size": 2864
+    },
+    {
+      "path": "updater/resources/skills/disk-health/scripts/Collect-DiskHealth.ps1",
+      "sha256": "370ed43388f16a087d9741da2a733fc6f577d790d2dd4c78ba53dcdb5657b329",
+      "size": 2422
+    },
+    {
+      "path": "updater/resources/skills/disk-health/scripts/Report.Common.ps1",
+      "sha256": "2d72055d523ac82fd5f86009757b3c77193ca7c26de079fea9adb69a621fab80",
+      "size": 5869
+    },
+    {
+      "path": "updater/resources/skills/file-organizer/SKILL.md",
+      "sha256": "1ca14cfd6904c27a4e43e06edfca700d3c1980a64114695cfb6e2f0ec71e1e64",
+      "size": 3481
+    },
+    {
+      "path": "updater/resources/skills/file-organizer/scripts/Invoke-FileOrganizer.ps1",
+      "sha256": "d1c67ec3308c06b583f1d8cd3c856bdd3c8b66e82c9353f0c9d0439400bf5c6e",
+      "size": 14708
+    },
+    {
+      "path": "updater/resources/skills/file-organizer/scripts/Report.Common.ps1",
+      "sha256": "2d72055d523ac82fd5f86009757b3c77193ca7c26de079fea9adb69a621fab80",
+      "size": 5869
+    },
+    {
+      "path": "updater/resources/skills/malware-triage/SKILL.md",
+      "sha256": "4eb4149d31ebe879c7d47a027729e60763efee1e6fff5b45bfe07730a8429099",
+      "size": 3244
+    },
+    {
+      "path": "updater/resources/skills/malware-triage/scripts/Collect-MalwareTriage.ps1",
+      "sha256": "4c38a25f61626c36155e2087ecab05fc06923088323514402604dce6ca4b517d",
+      "size": 3292
+    },
+    {
+      "path": "updater/resources/skills/malware-triage/scripts/Report.Common.ps1",
+      "sha256": "2d72055d523ac82fd5f86009757b3c77193ca7c26de079fea9adb69a621fab80",
+      "size": 5869
+    },
+    {
+      "path": "updater/resources/skills/network-troubleshooting/SKILL.md",
+      "sha256": "efde4296940fb5836e9481d6415174aaf068c1942935994f2006a632e2b822f3",
+      "size": 2789
+    },
+    {
+      "path": "updater/resources/skills/network-troubleshooting/scripts/Collect-Network.ps1",
+      "sha256": "1ced6665d872aca5e6798b38a117add57b72d6b4ed0d9824ca68e507db1649b0",
+      "size": 2640
+    },
+    {
+      "path": "updater/resources/skills/network-troubleshooting/scripts/Report.Common.ps1",
+      "sha256": "2d72055d523ac82fd5f86009757b3c77193ca7c26de079fea9adb69a621fab80",
+      "size": 5869
+    },
+    {
+      "path": "updater/resources/skills/windows-diagnostics/SKILL.md",
+      "sha256": "9fe24ab640f0ba949ac2449c42bb6b8453f588c0a65bed60d434454adfb5f2df",
+      "size": 3003
+    },
+    {
+      "path": "updater/resources/skills/windows-diagnostics/scripts/Collect-Diagnostics.ps1",
+      "sha256": "0c07db9a2b117715a4e759bba163da1e108e0e4038d07e2ecbc65e627dbd540e",
+      "size": 2150
+    },
+    {
+      "path": "updater/resources/skills/windows-diagnostics/scripts/Report.Common.ps1",
+      "sha256": "2d72055d523ac82fd5f86009757b3c77193ca7c26de079fea9adb69a621fab80",
+      "size": 5869
+    },
+    {
+      "path": "updater/resources/skills/windows-repair/SKILL.md",
+      "sha256": "0c981fe7111e6dc2aae8caf0ac7ef84f80f0438f282b4d296322e2a91e4eeedb",
+      "size": 3408
+    },
+    {
+      "path": "updater/resources/skills/windows-repair/scripts/Invoke-WindowsRepair.ps1",
+      "sha256": "bec92f3c43e4bbece4f7e792e79550eee736ab50be1a016afadfc83f21fb7f2e",
+      "size": 2463
+    },
+    {
+      "path": "updater/resources/skills/windows-repair/scripts/Report.Common.ps1",
+      "sha256": "2d72055d523ac82fd5f86009757b3c77193ca7c26de079fea9adb69a621fab80",
+      "size": 5869
+    },
+    {
+      "path": "updater/scripts/Clear-History.ps1",
+      "sha256": "150036d2280d19677e7d15b2306bf286a6bbe4d68b013c9e62c4538ff25c7b9e",
+      "size": 3388
+    },
+    {
+      "path": "updater/scripts/Entry.ps1",
+      "sha256": "e6a0a4c6dd1f86cb0279b6f48492bc17c5079d320936ffd72709e8769656f876",
+      "size": 2780
+    },
+    {
+      "path": "updater/scripts/Portable.Check.ps1",
+      "sha256": "1788ee34e35d02ab0c8d273c43f030d62a38e1030f9356f6fa0abe96dfc3981a",
+      "size": 3970
+    },
+    {
+      "path": "updater/scripts/Portable.Common.ps1",
+      "sha256": "49f3faf8f5a85178230a03be5cb7b652c1b0514b9fbfe09122bb15b68704b480",
+      "size": 19237
+    },
+    {
+      "path": "updater/scripts/Portable.Release.ps1",
+      "sha256": "a3b6c42b317b7ab68f5729a75cd57c746d844a2882dfe619b6628266f5481a24",
+      "size": 6618
+    },
+    {
+      "path": "updater/scripts/Portable.Update.ps1",
+      "sha256": "3c72702d78022e9cd4933212ce5486412336108e1b4ebb4215ba88654696a9cd",
+      "size": 27479
+    },
+    {
+      "path": "updater/scripts/Sync-Portable.ps1",
+      "sha256": "4f82248bb0490880516c15a8b9b971b8fae3d7b76cd3dd309587ee2f8b925adb",
+      "size": 8617
+    },
+    {
+      "path": "一键修复.bat",
+      "sha256": "4068ddf8e0d3bed355a8ee76f36900013b2547a40f2f7226bbdfb6621f161ef5",
+      "size": 546
+    },
+    {
+      "path": "一键删除对话历史.bat",
+      "sha256": "a55974cb7be6cac750fd5283e11b72a817f3bd2d3be33ca15ccf87fd9fc778b9",
+      "size": 539
+    },
+    {
+      "path": "一键同步.bat",
+      "sha256": "e6dbc7bfab9fdfe611cd598e9901e7699aa8554d3afdd014a335b3a9b3a96655",
+      "size": 384
+    },
+    {
+      "path": "一键更新.bat",
+      "sha256": "f5e6d626bba0112f0c04cadd12692f695ed1c5c9742b13759ae0cec79ff11546",
+      "size": 546
+    },
+    {
+      "path": "启动 Pi.bat",
+      "sha256": "0360003e6b7c3a21f04fb2800e4a1dd9de0a6fd6a1e3ccc5e27721c0991e2595",
+      "size": 570
+    },
+    {
+      "path": "检查环境.bat",
+      "sha256": "0935acb635cceeb105f772b4d520b8682dbdd0e32f2f47f26bdd831e38203d9f",
+      "size": 545
+    },
+    {
+      "path": ".github/workflows/prepare-distribution.yml",
+      "size": 7883,
+      "sha256": "2f58a1b5f9af8f2dd6d3b27957d9b2db1b0e002ef255a78c318e3b926b0f5de7"
+    },
+    {
+      "path": ".github/scripts/secret-scan-reviewed.json",
+      "size": 3367,
+      "sha256": "def67c861ea98396f4384de515148aab157d3f0bdb4ccd2eb561fbb3696c523c"
+    },
+    {
+      "path": ".github/scripts/Release-Ready.py",
+      "size": 12429,
+      "sha256": "0c16756b7e1f5d43f12ca7a40e51d8538cfe972f6534e184e7b78e4410e468cc"
+    },
+    {
+      "path": ".github/workflows/windows-validation.yml",
+      "size": 1554,
+      "sha256": "49c718901749f8137b00110b0db1de336eabd440102377ef2d913520aff9154d"
+    },
+    {
+      "path": "tests/Test-ReleaseReady.py",
+      "size": 7404,
+      "sha256": "d79c6aac88efd1201be369eae3ea04ff1262cccbce515c7eaa5aab47ee6bb42b"
+    }
+  ]
+}

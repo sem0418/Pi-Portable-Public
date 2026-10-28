@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 2,
+  "note": "Structural example only; never substitute this for the reviewed exact inventory. See corresponding-source.json for the real complete source records, recipes, notices, security baseline and scanner pins.",
+  "components": {
+    "pi": {
+      "version": "REVIEWED_VERSION",
+      "archiveSHA256": "EXACT_BINARY_ARCHIVE_SHA256",
+      "sourceIds": [
+        "EXACT_SOURCE_ID"
+      ]
+    },
+    "node": {
+      "version": "REVIEWED_VERSION",
+      "archiveSHA256": "EXACT_BINARY_ARCHIVE_SHA256",
+      "sourceIds": [
+        "EXACT_SOURCE_ID"
+      ]
+    },
+    "git": {
+      "version": "REVIEWED_VERSION",
+      "archiveSHA256": "EXACT_BINARY_ARCHIVE_SHA256",
+      "sourceIds": [
+        "EXACT_SOURCE_ID"
+      ]
+    }
+  },
+  "gitPackageListSHA256": "EXACT_PACKAGE_LIST_SHA256",
+  "packages": [
+    {
+      "name": "EXACT_BINARY_PACKAGE_NAME",
+      "version": "EXACT_PACKAGE_VERSION",
+      "sourceId": "EXACT_SOURCE_ID"
+    }
+  ],
+  "sources": [
+    {
+      "id": "EXACT_SOURCE_ID",
+      "filename": "EXACT_SOURCE_ARCHIVE",
+      "kind": "http",
+      "url": "https://upstream.example.invalid/exact-version-source.tar.gz",
+      "sha256": "EXACT_SOURCE_ARCHIVE_SHA256",
+      "size": 1,
+      "packageProof": {
+        "sourceInfoSHA256": "EXACT_SRCINFO_SHA256",
+        "recipeSHA256": "EXACT_PKGBUILD_SHA256",
+        "sourceBase": "EXACT_SOURCE_BASE",
+        "version": "EXACT_PACKAGE_VERSION",
+        "binaryPackages": [
+          "EXACT_BINARY_PACKAGE_NAME"
+        ]
+      }
+    }
+  ],
+  "noticeFiles": [
+    {
+      "path": "licenses/BUNDLED-DEPENDENCY-NOTICES.txt",
+      "sha256": "EXACT_NOTICE_SHA256"
+    }
+  ],
+  "distributionPlan": "The SAME ZIP supplies complete corresponding source/build material with every binary; no written source offer."
+}

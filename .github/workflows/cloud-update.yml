@@ -1,0 +1,55 @@
+name: Manual portable update
+on:
+  workflow_dispatch:
+    inputs:
+      max_new_lfs_mib:
+        description: 'Maximum conservative changed LFS payload in MiB (0 to 4096)'
+        default: '512'
+        required: true
+        type: string
+permissions:
+  contents: write
+  pull-requests: write
+concurrency:
+  group: portable-manual-update
+  cancel-in-progress: false
+jobs:
+  update-with-existing-updater:
+    if: github.ref_name == github.event.repository.default_branch
+    runs-on: windows-2022
+    timeout-minutes: 50
+    env:
+      PORTABLE_DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          lfs: true
+          fetch-depth: 1
+      - name: Validate budget before downloads
+        shell: powershell
+        env:
+          LFS_BUDGET: ${{ inputs.max_new_lfs_mib }}
+        run: |
+          if ($env:LFS_BUDGET -notmatch '^\d{1,4}$' -or [int]$env:LFS_BUDGET -gt 4096) {
+            throw 'LFS budget must be an integer from 0 to 4096 MiB.'
+          }
+      - name: Run original updater, then Windows tests and license refresh
+        shell: powershell
+        run: ./.github/scripts/Invoke-Validation.ps1 -RunUpdater
+      - name: Commit verified release files and open a draft PR
+        shell: powershell
+        env:
+          GH_TOKEN: ${{ github.token }}
+          LFS_BUDGET: ${{ inputs.max_new_lfs_mib }}
+        run: ./.github/scripts/Publish-Update.ps1 -MaxNewLfsMiB ([int]$env:LFS_BUDGET)
+      - name: Preserve summaries and execution log
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: manual-update-${{ github.run_id }}-${{ github.run_attempt }}
+          path: |
+            ${{ runner.temp }}/PiPortable-results/test-*.json
+            ${{ runner.temp }}/PiPortable-results/*summary.json
+            ${{ runner.temp }}/PiPortable-results/execution.log
+          if-no-files-found: warn
+          retention-days: 7

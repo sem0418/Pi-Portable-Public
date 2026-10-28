@@ -1,0 +1,1060 @@
+{
+    "version":  "1.4.0",
+    "files":  [
+                  {
+                      "path":  "assets/clankolas.png",
+                      "size":  539053,
+                      "sha256":  "169acd0dfe6fbb8d8742ed24a3fc654fd0b2e2d4223c733249c5493723f1b72d"
+                  },
+                  {
+                      "path":  "CHANGELOG.md",
+                      "size":  654645,
+                      "sha256":  "b0eac55f99b20254f81cf925a52f054ec87c1320454a3fd7ee624683e585add6"
+                  },
+                  {
+                      "path":  "docs/cli.md",
+                      "size":  17188,
+                      "sha256":  "c45e59f31574de71770a71c9a7c9b6ac03bf9cad4928aa31bb6614d661733679"
+                  },
+                  {
+                      "path":  "docs/cli-integration.md",
+                      "size":  6285,
+                      "sha256":  "edf8e723a70b4c3c40275db0391219e55d30597936212a9cfdef33963dd37f93"
+                  },
+                  {
+                      "path":  "docs/codemode.md",
+                      "size":  14585,
+                      "sha256":  "3a96ee10da36395bbd22beb60ac029f8ca8a859f2fd3c3104cfc38f9d5a1f95a"
+                  },
+                  {
+                      "path":  "docs/compaction.md",
+                      "size":  24093,
+                      "sha256":  "b5b23d10bb86d8ab32b67f80a7e57febd953222c6da6fd422ae91d232ef28faf"
+                  },
+                  {
+                      "path":  "docs/configuration.md",
+                      "size":  3239,
+                      "sha256":  "fc48d1ce7d885c5253222415fb7a4b46d75f80e6431eb924174657ff775099eb"
+                  },
+                  {
+                      "path":  "docs/containerization.md",
+                      "size":  7589,
+                      "sha256":  "e309fcb9a0a7592c0dba000ef8ee90f2d7ef1e01e6a1ac2f0cd9760dd63dee0c"
+                  },
+                  {
+                      "path":  "docs/custom-provider.md",
+                      "size":  12477,
+                      "sha256":  "fe926ed6194756c85ab6b56b7bfd12e81abe385acf39e0bb2a470eb6c70b8c59"
+                  },
+                  {
+                      "path":  "docs/docs.json",
+                      "size":  5134,
+                      "sha256":  "fc0bccd6bf66716ad1067d4fbf7258f674d89c89a12cb0b2587a027b9d7fdc49"
+                  },
+                  {
+                      "path":  "docs/environment-variables.md",
+                      "size":  5594,
+                      "sha256":  "097f2101e285f51f509be0b176d458825b83b929a635ae29d2a43703168170dd"
+                  },
+                  {
+                      "path":  "docs/extensions.md",
+                      "size":  28998,
+                      "sha256":  "46fc0baeb00db8ca8db399e33e0f506e86e425693b291258357e8063e2f3353c"
+                  },
+                  {
+                      "path":  "docs/how-pi-works.md",
+                      "size":  3300,
+                      "sha256":  "7d43ab8e2b886cd1047dcee503588a1c828b92333dd4f177526b89e6db8aaa8b"
+                  },
+                  {
+                      "path":  "docs/images/doom-extension.png",
+                      "size":  171987,
+                      "sha256":  "c3b89b5e1fba711a5bcfa188e13d8695a84f7cdda12d9e127bb45b36d13cbb27"
+                  },
+                  {
+                      "path":  "docs/images/exy.png",
+                      "size":  1510779,
+                      "sha256":  "a8f253347440aed01ff659f41f573d340bcfd6010d829726ae92fe18abf601de"
+                  },
+                  {
+                      "path":  "docs/images/interactive-mode.png",
+                      "size":  519083,
+                      "sha256":  "4078001e39978151bd66b1d0a20123e7ca2ec2d1b572dfd70f552be5e88c0692"
+                  },
+                  {
+                      "path":  "docs/images/tree-view.png",
+                      "size":  281981,
+                      "sha256":  "ca61e7bbf300dfb3840cc191dc66dc4e9f5166b2f1f4089e6fb13fd04a2c3c66"
+                  },
+                  {
+                      "path":  "docs/index.md",
+                      "size":  2507,
+                      "sha256":  "c107426e88eac570e9ecbea325cb45c2a6b778a324fd6e424bd032380a65614d"
+                  },
+                  {
+                      "path":  "docs/json.md",
+                      "size":  11106,
+                      "sha256":  "f103191816fdcf3627dfc98b89acad8a28eee737697130ddaeb2581131213543"
+                  },
+                  {
+                      "path":  "docs/keybindings.md",
+                      "size":  10658,
+                      "sha256":  "413aa1c5e95a934d216aa5aba20052fa2cf35940ba5f02d1f4b22ff53c6ec678"
+                  },
+                  {
+                      "path":  "docs/llama-cpp.md",
+                      "size":  7459,
+                      "sha256":  "dccba80951463657c57a831aa2da3a576b92c05455f9b73610b208c942dfc8f4"
+                  },
+                  {
+                      "path":  "docs/mcp.md",
+                      "size":  19870,
+                      "sha256":  "23b9cca35d1340e8adce6bed8b495da0ebb58931179a937db87d610a1b40b9bf"
+                  },
+                  {
+                      "path":  "docs/message-types.md",
+                      "size":  7536,
+                      "sha256":  "b832893fb762f87fdbbfd694241d484592942823791f3e81a6c4d915421ff5db"
+                  },
+                  {
+                      "path":  "docs/models.md",
+                      "size":  13992,
+                      "sha256":  "c9914f5411db5ddd158b5391ec1da76c1f65788cfaea3a90e1e1555451b3d12e"
+                  },
+                  {
+                      "path":  "docs/models-configuration.md",
+                      "size":  20716,
+                      "sha256":  "1eb60b0f1faad6f9fffd62ea257b545dbc983dbe4c5decc4803b1a241d604155"
+                  },
+                  {
+                      "path":  "docs/nvidia-rtx-llama-cpp.md",
+                      "size":  4290,
+                      "sha256":  "bcd12ebfd283d8f528cf206ee4ec74f981ab36d3604419acc434c595decbebdb"
+                  },
+                  {
+                      "path":  "docs/packages.md",
+                      "size":  6106,
+                      "sha256":  "5fe4a3009d7260fe1e2f54b64086fc3c8b4d678232bfa2dbc7e91fe588fc9ea5"
+                  },
+                  {
+                      "path":  "docs/prompt-templates.md",
+                      "size":  2490,
+                      "sha256":  "ad5113cce0d05ef0ac77b3c71f9ebe41ea68c072275f9273b9616e4924feda42"
+                  },
+                  {
+                      "path":  "docs/providers.md",
+                      "size":  9681,
+                      "sha256":  "bc8798e4cc3209e455e3dc50c6652ae73c057d40122a4a741d8b5b65a041c2f1"
+                  },
+                  {
+                      "path":  "docs/quickstart.md",
+                      "size":  4741,
+                      "sha256":  "10c69b394304f6e7d6409b6bde02b0165f5723ff4acfd49cfa8f7414f977266a"
+                  },
+                  {
+                      "path":  "docs/rpc.md",
+                      "size":  8897,
+                      "sha256":  "37a03d180115460a0a275022f4aeabef1e5345458df6a9b6e8a6de18474de720"
+                  },
+                  {
+                      "path":  "docs/rpc-commands.md",
+                      "size":  21482,
+                      "sha256":  "4deeee367852f4633ef594bc079f9e9fb14640a4e3ba8a69b7c89b6f54740838"
+                  },
+                  {
+                      "path":  "docs/rpc-extension-ui.md",
+                      "size":  6174,
+                      "sha256":  "3c6f2c6edfc8b1ace6642343727aef97a7e9234c85509850921b52d6ff09a48e"
+                  },
+                  {
+                      "path":  "docs/sdk.md",
+                      "size":  10147,
+                      "sha256":  "d9034ccbf2219a58712d8dd4fcdf47e687d77131e71dd5d119d8a71e9bd2a2e8"
+                  },
+                  {
+                      "path":  "docs/security.md",
+                      "size":  6542,
+                      "sha256":  "3b1e40a8d28b17c9eb7e496a7ba88fbe04665e3e6ae02873a58b943e325ad504"
+                  },
+                  {
+                      "path":  "docs/session-format.md",
+                      "size":  15766,
+                      "sha256":  "4f8fc42179b332bcf71fe4c85cc95d914853ff7486d68742954a45316b512a4a"
+                  },
+                  {
+                      "path":  "docs/sessions.md",
+                      "size":  4818,
+                      "sha256":  "152d6489f61a6de9349c8ceaade95d5498fbc74f21771f41ba8e87ce0e5d8936"
+                  },
+                  {
+                      "path":  "docs/settings.md",
+                      "size":  13799,
+                      "sha256":  "2915d26f91f4c46ab1b92e63cbc46b8d48888fa0e491168642a5a90f973bd814"
+                  },
+                  {
+                      "path":  "docs/shell-aliases.md",
+                      "size":  3172,
+                      "sha256":  "ebb55456870455b4da91cfd054ae2ac9b3a417e6ff48a009587c33e68ecd7807"
+                  },
+                  {
+                      "path":  "docs/skills.md",
+                      "size":  4793,
+                      "sha256":  "5b9805525b194474ef1fe5455a0917ef15ed7f710aa9bec2eee11879556469e5"
+                  },
+                  {
+                      "path":  "docs/slash-commands.md",
+                      "size":  2649,
+                      "sha256":  "d7e1db36e9186ff146a6c27de31fe169671f52cb6f7b93e1bf8d7fe76209a79c"
+                  },
+                  {
+                      "path":  "docs/terminal-setup.md",
+                      "size":  9093,
+                      "sha256":  "583381fb9dc466135a865ca406a3be299a7a8da2c9d810c5b73f401912a0a357"
+                  },
+                  {
+                      "path":  "docs/termux.md",
+                      "size":  3590,
+                      "sha256":  "1b0687157f2384385d07800ec23e6c225ef28fbf6648f55453cc7ce62f4c64ea"
+                  },
+                  {
+                      "path":  "docs/themes.md",
+                      "size":  8069,
+                      "sha256":  "6f11eb43ca6dad4c71bcfa2fc72ac13c013e3cb9383688b88923e0139b2d097c"
+                  },
+                  {
+                      "path":  "docs/tmux.md",
+                      "size":  1813,
+                      "sha256":  "9ec0abdbf74c57d51d4a93f308fb4aec4d8a3574a24cbfd9ba481d2e39f1273c"
+                  },
+                  {
+                      "path":  "docs/tui.md",
+                      "size":  11654,
+                      "sha256":  "20d3695ebd11e179a194f535f73870247544f655ebf22e42726c3be559c6d786"
+                  },
+                  {
+                      "path":  "docs/usage.md",
+                      "size":  5381,
+                      "sha256":  "6dfe7446c81d601d5ebef5769523115229f802da364fe90fcdf96e322ae9fbcd"
+                  },
+                  {
+                      "path":  "docs/virtual-models.md",
+                      "size":  8177,
+                      "sha256":  "5ab04dee3b3712b317522bb0784e28a3fef2e6b7fe1aeb1c1ca27778685a38f7"
+                  },
+                  {
+                      "path":  "docs/windows.md",
+                      "size":  3660,
+                      "sha256":  "e5a51792381a9eec859f034153c67f9ff52c36d3cff4c7a1faa0651f77f627c3"
+                  },
+                  {
+                      "path":  "examples/extensions/auto-commit-on-exit.ts",
+                      "size":  1571,
+                      "sha256":  "b89b5cb4c6f1f07b0b4291ab85a3c5f025d7d31ebb285821716502452b46af62"
+                  },
+                  {
+                      "path":  "examples/extensions/bash-spawn-hook.ts",
+                      "size":  696,
+                      "sha256":  "c79c87653e20ac6bd9f4813aa4bb01a483b3637700fa2edda220703958532662"
+                  },
+                  {
+                      "path":  "examples/extensions/bookmark.ts",
+                      "size":  1555,
+                      "sha256":  "a71d9449d415ad75c9f3d0d13afde129b9bea2d695b889566db17ecfca256d79"
+                  },
+                  {
+                      "path":  "examples/extensions/border-status-editor.ts",
+                      "size":  4444,
+                      "sha256":  "ccbbfddd4ff402432293b7adb21f58e869f37a5d12d4da81cea10cc5fc2311cd"
+                  },
+                  {
+                      "path":  "examples/extensions/built-in-tool-renderer.ts",
+                      "size":  7455,
+                      "sha256":  "4bfd0953e3dbf96ee0cdb26989a60ec91d4850323852ef09eafe5c2efdf23c00"
+                  },
+                  {
+                      "path":  "examples/extensions/claude-rules.ts",
+                      "size":  2488,
+                      "sha256":  "8a935f14f62c1c1a3e937f5c912c2215e25aa5fa591716e23c86224ce1dc34cd"
+                  },
+                  {
+                      "path":  "examples/extensions/commands.ts",
+                      "size":  2594,
+                      "sha256":  "36716b53da169936c7e1360a4fde1e2fc0c3356a6505f177235f09c5538c6e4f"
+                  },
+                  {
+                      "path":  "examples/extensions/confirm-destructive.ts",
+                      "size":  1680,
+                      "sha256":  "55502f82109df07e922ef3ec41af1b1a5ed33d4d6d56076654ab2bc88e2e0888"
+                  },
+                  {
+                      "path":  "examples/extensions/custom-compaction.ts",
+                      "size":  3971,
+                      "sha256":  "ea797b3508fd8600526f381466e8b08bb84f3d234932a9d6ce512698527d0aa9"
+                  },
+                  {
+                      "path":  "examples/extensions/custom-footer.ts",
+                      "size":  2149,
+                      "sha256":  "1e5f17bec95a48d407fbcc092faf7e1f6021c30cee4a66ec09bc120412292cb2"
+                  },
+                  {
+                      "path":  "examples/extensions/custom-header.ts",
+                      "size":  2408,
+                      "sha256":  "5de09cf861d3965201991d6e837d6b68e8a2e80cb89279ee9177cc05d31f723d"
+                  },
+                  {
+                      "path":  "examples/extensions/custom-provider-anthropic/.gitignore",
+                      "size":  14,
+                      "sha256":  "4d56952b0fb13bf8f9b6c13a6d4c34a075bac3af447636a1df4335d7576e2f97"
+                  },
+                  {
+                      "path":  "examples/extensions/custom-provider-anthropic/index.ts",
+                      "size":  19811,
+                      "sha256":  "52bb733e1a25d9e175a644e6a6e17bbf61071beecf0f2903869baa9579a05ab3"
+                  },
+                  {
+                      "path":  "examples/extensions/custom-provider-anthropic/package.json",
+                      "size":  374,
+                      "sha256":  "b2ceede9b12cef79f37d02c8e850132afdab1b3316c16d622c0c8343244e85c3"
+                  },
+                  {
+                      "path":  "examples/extensions/custom-provider-anthropic/package-lock.json",
+                      "size":  651,
+                      "sha256":  "4c1ccae817de13a0d0eee610fb12ee699b3c1f97cf28cbe83ec50cab0f338a77"
+                  },
+                  {
+                      "path":  "examples/extensions/custom-provider-gitlab-duo/.gitignore",
+                      "size":  14,
+                      "sha256":  "4d56952b0fb13bf8f9b6c13a6d4c34a075bac3af447636a1df4335d7576e2f97"
+                  },
+                  {
+                      "path":  "examples/extensions/custom-provider-gitlab-duo/index.ts",
+                      "size":  12148,
+                      "sha256":  "0c4adac82eff25fef23223af77e11cd53535834fece9731009b125446e213158"
+                  },
+                  {
+                      "path":  "examples/extensions/custom-provider-gitlab-duo/package.json",
+                      "size":  316,
+                      "sha256":  "4af767a958f402efc19fc6157c75c209edc45c8ab6103b60f13973369ba41990"
+                  },
+                  {
+                      "path":  "examples/extensions/custom-provider-gitlab-duo/test.ts",
+                      "size":  2681,
+                      "sha256":  "58dfa6fdb63521ccad551b7463ff56d4aecf735074934a8e9fc34b71e7083d00"
+                  },
+                  {
+                      "path":  "examples/extensions/debug-provider.ts",
+                      "size":  2736,
+                      "sha256":  "a915f86a26a0257537939701797b1f613072275e76bdd8a27dd941bbf519643a"
+                  },
+                  {
+                      "path":  "examples/extensions/dirty-repo-guard.ts",
+                      "size":  1479,
+                      "sha256":  "0037a69abdf4cf98181db799bef5bdee8981861315eb82ddab78126c2b0f13c4"
+                  },
+                  {
+                      "path":  "examples/extensions/doom-overlay/.gitignore",
+                      "size":  41,
+                      "sha256":  "b26aa26693c610d46d9c8b387b28d20dc5196a73b979f5522e24dd689aab7bc8"
+                  },
+                  {
+                      "path":  "examples/extensions/doom-overlay/doom/build.sh",
+                      "size":  3366,
+                      "sha256":  "ab09c9b6dc98ea7c1fa8e74c13981ce69b698c01aec77309c5c7d40ad114d38c"
+                  },
+                  {
+                      "path":  "examples/extensions/doom-overlay/doom/build/doom.js",
+                      "size":  64607,
+                      "sha256":  "c3147cf4881c88b4210c017c26828f52aff83f0c4db27d7dad3fe6cda9ade1fb"
+                  },
+                  {
+                      "path":  "examples/extensions/doom-overlay/doom/build/doom.wasm",
+                      "size":  380169,
+                      "sha256":  "571d161956593508cf4ade732ae93753f00484bb526667a8676571cca14dec7d"
+                  },
+                  {
+                      "path":  "examples/extensions/doom-overlay/doom/doomgeneric_pi.c",
+                      "size":  1709,
+                      "sha256":  "98210909e1e7dee71cbbdba64f1db4bebd88b504e861ee36ea42093c59b251a1"
+                  },
+                  {
+                      "path":  "examples/extensions/doom-overlay/doom-component.ts",
+                      "size":  3645,
+                      "sha256":  "d95dc47c92db0fdc5b0e0b56a277c67f277012d3f7296df745d8a93f64d5a42e"
+                  },
+                  {
+                      "path":  "examples/extensions/doom-overlay/doom-engine.ts",
+                      "size":  4914,
+                      "sha256":  "706e43f70bd374b73928e5a44d196d1dd5c03d93979d08bdfc01d049b5083855"
+                  },
+                  {
+                      "path":  "examples/extensions/doom-overlay/doom-keys.ts",
+                      "size":  3495,
+                      "sha256":  "e8bd99a4ce90dd44ad120c58f3b2ba7bc0b0c662bcdc4ed4994d059130be9fdd"
+                  },
+                  {
+                      "path":  "examples/extensions/doom-overlay/index.ts",
+                      "size":  2117,
+                      "sha256":  "f89818dd75c7d8970458b1dbb9c5e85fea9b86534fd740c898c1f6f9c9f9ceba"
+                  },
+                  {
+                      "path":  "examples/extensions/doom-overlay/README.md",
+                      "size":  1322,
+                      "sha256":  "e17bc73b76c7977ffeef99120c7896ff992cf5938a60c4d7427a7b19fc180d97"
+                  },
+                  {
+                      "path":  "examples/extensions/doom-overlay/wad-finder.ts",
+                      "size":  1719,
+                      "sha256":  "20254888262081bf96932253bfd346971deefa48d8df011fd3baa7aa2d653b7d"
+                  },
+                  {
+                      "path":  "examples/extensions/dynamic-resources/dynamic.json",
+                      "size":  2007,
+                      "sha256":  "2bf0164779b4ea3c2572f33b1e979c427a4839193998fda19bfc5cba2a4692c5"
+                  },
+                  {
+                      "path":  "examples/extensions/dynamic-resources/dynamic.md",
+                      "size":  160,
+                      "sha256":  "e61e2c971d02d628a58f7c36b9b37bd3e636e4ad60618a7f65e2b41410c38f35"
+                  },
+                  {
+                      "path":  "examples/extensions/dynamic-resources/index.ts",
+                      "size":  457,
+                      "sha256":  "dfbc49418fe46ebc9696fa335709df2ed0d4c4703da8c1ad0eb317d11fce8433"
+                  },
+                  {
+                      "path":  "examples/extensions/dynamic-resources/SKILL.md",
+                      "size":  177,
+                      "sha256":  "f8f34b0d81aa791a2d56501756fe0ace21fb78ca2754025d093f41d3b0ccaf69"
+                  },
+                  {
+                      "path":  "examples/extensions/dynamic-tools.ts",
+                      "size":  2211,
+                      "sha256":  "4394098c11f98ffc26e2487acda2e09b9467ef9ff5867def7273cb0c82a2b6c0"
+                  },
+                  {
+                      "path":  "examples/extensions/entry-renderer.ts",
+                      "size":  1288,
+                      "sha256":  "e4c01fcf382972d570ebf37d044e32065eae062fe70987b1b885d75d46aa0b11"
+                  },
+                  {
+                      "path":  "examples/extensions/event-bus.ts",
+                      "size":  1348,
+                      "sha256":  "1185942b7afd83692d9e8da029e8594d702157398c693ec8b3ddb02b0780828a"
+                  },
+                  {
+                      "path":  "examples/extensions/file-trigger.ts",
+                      "size":  1033,
+                      "sha256":  "6f5fc3dc8fa387d8ca6973786c521feb94da58838b0e171a881fb6b3a5243ac0"
+                  },
+                  {
+                      "path":  "examples/extensions/git-checkpoint.ts",
+                      "size":  1485,
+                      "sha256":  "b60c85f797091a1f21ccb2a998027c6229fe995bdd62dbb1cdcc22946768f40b"
+                  },
+                  {
+                      "path":  "examples/extensions/github-issue-autocomplete.ts",
+                      "size":  5282,
+                      "sha256":  "4646ef360e57aa98c787ba21ca2f2e8acb3db30c4db0503e64cdbea4a4c2ac65"
+                  },
+                  {
+                      "path":  "examples/extensions/git-merge-and-resolve.ts",
+                      "size":  4108,
+                      "sha256":  "a3c077c87544122abe83b275f3d527f60c80c87f460ea2499d66bde9b4880133"
+                  },
+                  {
+                      "path":  "examples/extensions/gondolin/.gitignore",
+                      "size":  14,
+                      "sha256":  "4d56952b0fb13bf8f9b6c13a6d4c34a075bac3af447636a1df4335d7576e2f97"
+                  },
+                  {
+                      "path":  "examples/extensions/gondolin/index.ts",
+                      "size":  16647,
+                      "sha256":  "9a9897639de8127a2abe6bb0d00f0005cd9e9cf9d51fd15893a827e67326bf62"
+                  },
+                  {
+                      "path":  "examples/extensions/gondolin/package.json",
+                      "size":  339,
+                      "sha256":  "010f1a949005f706239d788a2481c355028eb4c366b4ea16c87577e63caab905"
+                  },
+                  {
+                      "path":  "examples/extensions/gondolin/package-lock.json",
+                      "size":  6043,
+                      "sha256":  "256d3e45b7c6d293bdfd88a3c4884d8bb38ecdbc4064c290255d2b4d193ea535"
+                  },
+                  {
+                      "path":  "examples/extensions/handoff.ts",
+                      "size":  5973,
+                      "sha256":  "ea07b6f680357b677d0f43f0016961ee8cb1331d37ae113e9466a3acffb2e381"
+                  },
+                  {
+                      "path":  "examples/extensions/hello.ts",
+                      "size":  640,
+                      "sha256":  "0aa4e9800c2526914d4c1edb00b2cfa9bd9dd6da5218289994cccd5f5bfa4934"
+                  },
+                  {
+                      "path":  "examples/extensions/hidden-thinking-label.ts",
+                      "size":  1451,
+                      "sha256":  "179dc3704b5c563b49a7f4577222bf9bbaa5becf98b85c75e56ab26c001c5b22"
+                  },
+                  {
+                      "path":  "examples/extensions/inline-bash.ts",
+                      "size":  2958,
+                      "sha256":  "69b9dfc34e7b1ada9afe10cda3384b0b1a6f3c3a47da5fb7d16f914399b023d4"
+                  },
+                  {
+                      "path":  "examples/extensions/input-transform.ts",
+                      "size":  1444,
+                      "sha256":  "cf0f65d610631ca75d18aae1c8f1408139702f674cb2835f8c009b943776474b"
+                  },
+                  {
+                      "path":  "examples/extensions/input-transform-streaming.ts",
+                      "size":  1213,
+                      "sha256":  "5c251ebda6163c8279e3c6d5f0aee56421ed150255dbb954f08ca7d2280b3ad2"
+                  },
+                  {
+                      "path":  "examples/extensions/interactive-shell.ts",
+                      "size":  4788,
+                      "sha256":  "36a7efb5b132e666c643129ce09c3f83f56aed9924563e6b7269e0e126611ecc"
+                  },
+                  {
+                      "path":  "examples/extensions/jev-router.ts",
+                      "size":  4800,
+                      "sha256":  "cf2c9ef4baf9233faa133e99255786b00518cb4977d068c811a11b3c96f0a2d6"
+                  },
+                  {
+                      "path":  "examples/extensions/mac-system-theme.ts",
+                      "size":  1197,
+                      "sha256":  "d7349bae999a798c71b283165e06d0142d41b0264bfdad11ddcb1ec8b62f8710"
+                  },
+                  {
+                      "path":  "examples/extensions/message-renderer.ts",
+                      "size":  1929,
+                      "sha256":  "bedc198df5215c0a758e0743224599003630741a4ff72d4327837ce309e5ec8c"
+                  },
+                  {
+                      "path":  "examples/extensions/minimal-mode.ts",
+                      "size":  10806,
+                      "sha256":  "040cbc7619b2e903888c8626e2fa55ca5e3f820535dfd1aadcb2060e156a8770"
+                  },
+                  {
+                      "path":  "examples/extensions/modal-editor.ts",
+                      "size":  2417,
+                      "sha256":  "4742283930949fad1920359540aa9d42c833d2d24eaa49564bfc08f90e328b0d"
+                  },
+                  {
+                      "path":  "examples/extensions/model-status.ts",
+                      "size":  957,
+                      "sha256":  "b6c073c0bdf26ac17e2fed01d02b6447fd4e2763b7b6ca2f2b493574ced25247"
+                  },
+                  {
+                      "path":  "examples/extensions/notify.ts",
+                      "size":  2073,
+                      "sha256":  "70e4333e09ce00d546c116fd2e918abf7616c70b5da6e88ba8ee21a326afd483"
+                  },
+                  {
+                      "path":  "examples/extensions/overlay-qa-tests.ts",
+                      "size":  46148,
+                      "sha256":  "4b1778e9e247c9eb24fe48e13fff0272f6f78b8102b4ed085d03598c3b98773f"
+                  },
+                  {
+                      "path":  "examples/extensions/overlay-test.ts",
+                      "size":  5517,
+                      "sha256":  "801b7c2eeec57c3569187b4b4d851f2159223ec6e9772e406ec65ed728ca6db9"
+                  },
+                  {
+                      "path":  "examples/extensions/permission-gate.ts",
+                      "size":  1019,
+                      "sha256":  "e32086ba9dd9b4ba0fd308b65241d9affa0b5ecd3f90ef7ea1b9f2b30cab8cc1"
+                  },
+                  {
+                      "path":  "examples/extensions/pirate.ts",
+                      "size":  1461,
+                      "sha256":  "dd6ce684bbe7630e4a749fe133ef8b8b875adbc7e31284b17fe0b8157d51e013"
+                  },
+                  {
+                      "path":  "examples/extensions/plan-mode/index.ts",
+                      "size":  12403,
+                      "sha256":  "bef2bf0712aea7b7d0f73d174e24ac5309679e6cc143f7bcbf1a9e0121222af8"
+                  },
+                  {
+                      "path":  "examples/extensions/plan-mode/README.md",
+                      "size":  2009,
+                      "sha256":  "1ff8d611b8fbafef4ca1e3dbc72136fbcc166461b69f859b5e961b15147bff39"
+                  },
+                  {
+                      "path":  "examples/extensions/plan-mode/utils.ts",
+                      "size":  4129,
+                      "sha256":  "12ea28d57cc55e68e8d52a2f1d16df8b2e7f2749cd694d41453028002a2bdad9"
+                  },
+                  {
+                      "path":  "examples/extensions/preset.ts",
+                      "size":  14451,
+                      "sha256":  "7942b7f933f97bcc29024a87f8526969413ba6f87b0bec537648a2926a0a4e29"
+                  },
+                  {
+                      "path":  "examples/extensions/project-trust.ts",
+                      "size":  2131,
+                      "sha256":  "78781c1f2a1613cf31c02a29ff6a6abd86b60bdf34343465e46cd85c01491578"
+                  },
+                  {
+                      "path":  "examples/extensions/prompt-customizer.ts",
+                      "size":  1691,
+                      "sha256":  "429546f46795bccda4078deace5729b8230f6103807d424eaf71817c6e07da0a"
+                  },
+                  {
+                      "path":  "examples/extensions/protected-paths.ts",
+                      "size":  808,
+                      "sha256":  "9ca66b1f3b1b9a61cc5ddc660f92cca2ea66c4264a1bdb6b00e0da5844399fe2"
+                  },
+                  {
+                      "path":  "examples/extensions/provider-payload.ts",
+                      "size":  764,
+                      "sha256":  "e0016077798098f528b1129954c30a28809a1513924d9c2e0efda9328d503a49"
+                  },
+                  {
+                      "path":  "examples/extensions/qna.ts",
+                      "size":  3501,
+                      "sha256":  "a639a65a486fd05a42afcf14aa59dc32e505e41ada43869167ddfd789a3c7da6"
+                  },
+                  {
+                      "path":  "examples/extensions/question.ts",
+                      "size":  8494,
+                      "sha256":  "a1625d2c72a65d859154a7e66bef222d48ca9e3654a8bb910829ad350378a4c4"
+                  },
+                  {
+                      "path":  "examples/extensions/questionnaire.ts",
+                      "size":  13565,
+                      "sha256":  "3f1f719d81152ff013f5d36a97cc3976388d43f2d89bff0f19827d3443d903e6"
+                  },
+                  {
+                      "path":  "examples/extensions/rainbow-editor.ts",
+                      "size":  2386,
+                      "sha256":  "f95f17ba8a0376180bd23510c20151e83aadc74142e989f14227bf5c4196883f"
+                  },
+                  {
+                      "path":  "examples/extensions/README.md",
+                      "size":  10199,
+                      "sha256":  "b51e1095d338ed8bc6cb0a40dca12da66ffd12d6f4ec7bfd57815fac84d87662"
+                  },
+                  {
+                      "path":  "examples/extensions/reload-runtime.ts",
+                      "size":  1185,
+                      "sha256":  "911f26b872860a551572fa1d94d251ddd476d4ea9483b6052e9658d2784b38fc"
+                  },
+                  {
+                      "path":  "examples/extensions/rpc-demo.ts",
+                      "size":  3632,
+                      "sha256":  "3d54a396eee12eb04ea12d0ea03716a6edd3e8743502b6a529e3b8d429ae640d"
+                  },
+                  {
+                      "path":  "examples/extensions/sandbox/.gitignore",
+                      "size":  13,
+                      "sha256":  "16d30e4462189fb14dd611bdb708c510630c576a1f35b9383e89a4352da36c97"
+                  },
+                  {
+                      "path":  "examples/extensions/sandbox/index.ts",
+                      "size":  8983,
+                      "sha256":  "b5e527aac27254002f27b8bb9de7bc62e242e39eeb7c963683096039e0aa173e"
+                  },
+                  {
+                      "path":  "examples/extensions/sandbox/package.json",
+                      "size":  343,
+                      "sha256":  "4b4bfe0ebeecf2af747a3e023a5edc143cba9c36137d10051e1124d1c1ad9732"
+                  },
+                  {
+                      "path":  "examples/extensions/sandbox/package-lock.json",
+                      "size":  3116,
+                      "sha256":  "cd4e34dbd8a9d4b0efdb58becb6c4201eb2ad9e44228b9a272b6853bfb54539d"
+                  },
+                  {
+                      "path":  "examples/extensions/send-user-message.ts",
+                      "size":  2832,
+                      "sha256":  "9261e433c782f354530105e1c9723a19798868f72fd1f5d68af3a4624ad7e446"
+                  },
+                  {
+                      "path":  "examples/extensions/session-name.ts",
+                      "size":  785,
+                      "sha256":  "a0b9fd94e2cc827931150cc409238b473da635ab1a1cddce633cae5937a3ae24"
+                  },
+                  {
+                      "path":  "examples/extensions/shutdown-command.ts",
+                      "size":  2045,
+                      "sha256":  "68dc7f9561aa9b1c0f39cae19c0f41d56171a99875972e5998de3caa75f96e09"
+                  },
+                  {
+                      "path":  "examples/extensions/snake.ts",
+                      "size":  9421,
+                      "sha256":  "3ef506ab52927e866fad096f83b7cbfd0eb50e1504dcabf1b1eb28a06745c937"
+                  },
+                  {
+                      "path":  "examples/extensions/space-invaders.ts",
+                      "size":  15174,
+                      "sha256":  "43281ae25bea645d44db01234f24df80e2f866771d02de0b416ab32fb3883a1f"
+                  },
+                  {
+                      "path":  "examples/extensions/ssh.ts",
+                      "size":  7293,
+                      "sha256":  "c03bdef919457013e3798d10250f34255742fd3dc79885ac3d321b34f6a1149d"
+                  },
+                  {
+                      "path":  "examples/extensions/status-line.ts",
+                      "size":  937,
+                      "sha256":  "26e27b1158e980551f63f46e55dad055ac613779c2b8c39df4cddc11be26103d"
+                  },
+                  {
+                      "path":  "examples/extensions/structured-output.ts",
+                      "size":  2187,
+                      "sha256":  "72a3a665ce3de1419c837db6eb8a0e7a890310c6e02e4d59c454e5c9514c15ec"
+                  },
+                  {
+                      "path":  "examples/extensions/subagent/agents.ts",
+                      "size":  4562,
+                      "sha256":  "cc85ecd33b89aa575bea3d2a9a9da7654a6305da4de02e5041aa5342a1de29b4"
+                  },
+                  {
+                      "path":  "examples/extensions/subagent/agents/planner.md",
+                      "size":  896,
+                      "sha256":  "452f21f65957753cec3b0772004209c108071be168e627fffd7191234c0ce64e"
+                  },
+                  {
+                      "path":  "examples/extensions/subagent/agents/reviewer.md",
+                      "size":  933,
+                      "sha256":  "b5c3f13b67207e8e32de631f8cd52a373d9b956028e2f8c1fd8b737b5f239265"
+                  },
+                  {
+                      "path":  "examples/extensions/subagent/agents/scout.md",
+                      "size":  1255,
+                      "sha256":  "3b84e8e01c6e05c8dfbff1c845c0c6371f4f16350735d4d1dbd02bfa98b1d4e6"
+                  },
+                  {
+                      "path":  "examples/extensions/subagent/agents/worker.md",
+                      "size":  664,
+                      "sha256":  "ca2b2298fcbd8bfafcfe61977dc8075001a64b9c4d8c289c3b5eaa896efe6238"
+                  },
+                  {
+                      "path":  "examples/extensions/subagent/index.ts",
+                      "size":  35523,
+                      "sha256":  "1d11858d163e2a3a258af51c1923fc55ad825813acd6224462fd25ad61f5401b"
+                  },
+                  {
+                      "path":  "examples/extensions/subagent/prompts/implement.md",
+                      "size":  579,
+                      "sha256":  "65462de33c97ac1372cfed270dad9af164605b05028c069dd4c013ff9792675b"
+                  },
+                  {
+                      "path":  "examples/extensions/subagent/prompts/implement-and-review.md",
+                      "size":  494,
+                      "sha256":  "019ba4bf42d596ea03fc4564be5b2cc55a06227c95db19a4d5a5bb96697a75f9"
+                  },
+                  {
+                      "path":  "examples/extensions/subagent/prompts/scout-and-plan.md",
+                      "size":  496,
+                      "sha256":  "9506399391e0d2c71826c45f26cc332175dd964465f99a8bb880e109f8ed89f4"
+                  },
+                  {
+                      "path":  "examples/extensions/subagent/README.md",
+                      "size":  6298,
+                      "sha256":  "6a888330bf974657751e09f5d375a9039872d59d6606fc217c5105c7eca51b1a"
+                  },
+                  {
+                      "path":  "examples/extensions/summarize.ts",
+                      "size":  5072,
+                      "sha256":  "9c75e838071773d5bacce27ac8c5305160c56958018884f960c3db96b3d09368"
+                  },
+                  {
+                      "path":  "examples/extensions/system-prompt-header.ts",
+                      "size":  528,
+                      "sha256":  "aa97f1add4fe347b3fc37cd3709950a105b0db5d6cdaf19325b58a9fbfd05223"
+                  },
+                  {
+                      "path":  "examples/extensions/tic-tac-toe.ts",
+                      "size":  35382,
+                      "sha256":  "479597f4e76ef1eae3dae71ec9d5c26978c5b9221f950e3e134078c5b532314b"
+                  },
+                  {
+                      "path":  "examples/extensions/timed-confirm.ts",
+                      "size":  2238,
+                      "sha256":  "c35304599e6f07238ef5472efe9c3f2fef2a022f801750ed792ef9061c7de10f"
+                  },
+                  {
+                      "path":  "examples/extensions/titlebar-spinner.ts",
+                      "size":  1623,
+                      "sha256":  "ec56e7edf954966b5991bcad63141be1a09d17753cdd0c59efca1b9e649dadf2"
+                  },
+                  {
+                      "path":  "examples/extensions/todo.ts",
+                      "size":  8848,
+                      "sha256":  "e46824d00217e25242c186d41837cc84ca81b23f978500323448502a9a424ee2"
+                  },
+                  {
+                      "path":  "examples/extensions/tool-override.ts",
+                      "size":  4821,
+                      "sha256":  "5d3cc796311a16132db810fcd9e437c16abd46978b723b9120734e57cc545726"
+                  },
+                  {
+                      "path":  "examples/extensions/tools.ts",
+                      "size":  3869,
+                      "sha256":  "5eaebc40cffe885fee25c95e3d8aec79cfbd595b6eac8ac5a6de6c4afec3d5d8"
+                  },
+                  {
+                      "path":  "examples/extensions/trigger-compact.ts",
+                      "size":  1350,
+                      "sha256":  "92c3b831f9f7bf01a3e0a2df11f4e404f5ac5843000b94e8340a5d78f3cb3add"
+                  },
+                  {
+                      "path":  "examples/extensions/truncated-tool.ts",
+                      "size":  6490,
+                      "sha256":  "4ed5fbeb6da53eab8d1e04721d77961b8d1b3bf5e11d1512a17fc5a3f58f9955"
+                  },
+                  {
+                      "path":  "examples/extensions/widget-placement.ts",
+                      "size":  367,
+                      "sha256":  "ffabd33cf58efb908de2025aac4cb41daf13dbeee24b5ad8dcd0361b43eff6d7"
+                  },
+                  {
+                      "path":  "examples/extensions/with-deps/.gitignore",
+                      "size":  14,
+                      "sha256":  "4d56952b0fb13bf8f9b6c13a6d4c34a075bac3af447636a1df4335d7576e2f97"
+                  },
+                  {
+                      "path":  "examples/extensions/with-deps/index.ts",
+                      "size":  1012,
+                      "sha256":  "8d4dbc7028c891eac7f0386d25eecea3e9ac0de7fd841b5bb08137e2ec5ab443"
+                  },
+                  {
+                      "path":  "examples/extensions/with-deps/package.json",
+                      "size":  395,
+                      "sha256":  "1cedd74eb4891d548ff4ae0b90adb3ce73086fa21b11fe489e0d8b1ead1c5267"
+                  },
+                  {
+                      "path":  "examples/extensions/with-deps/package-lock.json",
+                      "size":  892,
+                      "sha256":  "a4863bc4e63ff31dd43a6b469835dd0057f8792d940af0a349ec35187ad03663"
+                  },
+                  {
+                      "path":  "examples/extensions/working-indicator.ts",
+                      "size":  3426,
+                      "sha256":  "e88295d765b78fd6aac0e93db92b183ee9b7103dc21577e3c5a42665dfad032c"
+                  },
+                  {
+                      "path":  "examples/extensions/working-message-test.ts",
+                      "size":  904,
+                      "sha256":  "91ee09378f13cce142a4314bec1bfe9784e10484c33463c4fe3139c391c117a0"
+                  },
+                  {
+                      "path":  "examples/README.md",
+                      "size":  1282,
+                      "sha256":  "294836cfa47cd2cff1cab628533aefc5fe2d888621e43fe9f4101c09c2917a98"
+                  },
+                  {
+                      "path":  "examples/rpc-client.ts",
+                      "size":  1057,
+                      "sha256":  "b46b19c291fbcb59f8f9c539c2dbe12a43eae25e4d7528084844bbb79d27b6f7"
+                  },
+                  {
+                      "path":  "examples/rpc-extension-ui.ts",
+                      "size":  17330,
+                      "sha256":  "09bc33c28fdc9032e3752a487d659ac21c6776c6f589c5b1ae0967ef4ee5f127"
+                  },
+                  {
+                      "path":  "examples/sdk/01-minimal.ts",
+                      "size":  689,
+                      "sha256":  "ffe5215e36f750f5ca7146cc7dfa5be36461292036d55b8db652b4d26331f351"
+                  },
+                  {
+                      "path":  "examples/sdk/02-custom-model.ts",
+                      "size":  1378,
+                      "sha256":  "dccc8dbdb1742ea00beeed87d302b8a23ac7f7e36a0b6a4c43b283c21be0ee55"
+                  },
+                  {
+                      "path":  "examples/sdk/03-custom-prompt.ts",
+                      "size":  1923,
+                      "sha256":  "d6db1f36a8e04466d9cbcc24ffb6fe0697858aa6c0e5013d5d90f12798314ef5"
+                  },
+                  {
+                      "path":  "examples/sdk/04-skills.ts",
+                      "size":  1452,
+                      "sha256":  "4cbf189bf88d14155281349d4d39cc236066d98095aae2d184d4ba7267ab5e42"
+                  },
+                  {
+                      "path":  "examples/sdk/05-tools.ts",
+                      "size":  1611,
+                      "sha256":  "5df5f9577b343d22d072d839341916536299c8191dc66c6c801a8bbddda23544"
+                  },
+                  {
+                      "path":  "examples/sdk/06-extensions.ts",
+                      "size":  2673,
+                      "sha256":  "8e01ee409200b6516e9a6a0d9f3b3f61d2ad78aaaa18bd2ef9a8f77820d149b2"
+                  },
+                  {
+                      "path":  "examples/sdk/07-context-files.ts",
+                      "size":  1175,
+                      "sha256":  "37bd18a284e961903d646e0cd1abdeda72cd968dbe4f40892e8d345a66916b36"
+                  },
+                  {
+                      "path":  "examples/sdk/08-prompt-templates.ts",
+                      "size":  1374,
+                      "sha256":  "a1b314988f1f5b2e61c80c19c79b68630a2f3c443008a200376286710a2744ed"
+                  },
+                  {
+                      "path":  "examples/sdk/09-api-keys-and-oauth.ts",
+                      "size":  1092,
+                      "sha256":  "d1d2b1bd4e57a3b2ab6f910068e8382759d12a94fbecf1332e96a9ebe4683eb4"
+                  },
+                  {
+                      "path":  "examples/sdk/10-settings.ts",
+                      "size":  1705,
+                      "sha256":  "558f82b9d0655935e6a28ec09f6c35f0f9593f8b034f25d45400c02bc77a778a"
+                  },
+                  {
+                      "path":  "examples/sdk/11-sessions.ts",
+                      "size":  1825,
+                      "sha256":  "538c7028bf6823c84be930eb6745731f2c87ba05a45df2d86d93e66f01674576"
+                  },
+                  {
+                      "path":  "examples/sdk/12-full-control.ts",
+                      "size":  2031,
+                      "sha256":  "3cf794d470ddbde4504ae965d24a23c42378d1ac86033522e46907ac05518343"
+                  },
+                  {
+                      "path":  "examples/sdk/13-session-runtime.ts",
+                      "size":  1889,
+                      "sha256":  "0e9f408720a561a62b2630eccb18ece49f9dba567dc65494757da0a91608827a"
+                  },
+                  {
+                      "path":  "examples/sdk/14-codemode-mcp.ts",
+                      "size":  1991,
+                      "sha256":  "02ae7714e22753a76b0f44033366d43529185b325b92d47bb5d1d0eb5ae34f5e"
+                  },
+                  {
+                      "path":  "examples/sdk/README.md",
+                      "size":  4790,
+                      "sha256":  "c1f9d8f58c300195d03a420222d2d5370d2884a18a4190a1d8c8ea9371c016ff"
+                  },
+                  {
+                      "path":  "export-html/ansi-to-html.d.ts",
+                      "size":  771,
+                      "sha256":  "57d23f45aef05ba2b1a52a8e6b0e1f1ba51b55ab0b54e8d42938a438b088977a"
+                  },
+                  {
+                      "path":  "export-html/ansi-to-html.d.ts.map",
+                      "size":  296,
+                      "sha256":  "2847dc4f48c9ec5c8cd7aeacf1a6083ab4fc44f4b7e6667547b1549215c68576"
+                  },
+                  {
+                      "path":  "export-html/ansi-to-html.js",
+                      "size":  7711,
+                      "sha256":  "44e5fd3585104e5e8cc0c7bea91a10efa7cb7e3b5bc5e2fb9090d5be4419df14"
+                  },
+                  {
+                      "path":  "export-html/ansi-to-html.js.map",
+                      "size":  15056,
+                      "sha256":  "d24d23d27ad31a21a4fb133c6e7ba2dc2c876f28656ff1254b1af3da234dc51c"
+                  },
+                  {
+                      "path":  "export-html/index.d.ts",
+                      "size":  1541,
+                      "sha256":  "cd83b5d85e893b8ca18742b28038883dd7cf06c98a203e00d74040f78a6a656d"
+                  },
+                  {
+                      "path":  "export-html/index.d.ts.map",
+                      "size":  1107,
+                      "sha256":  "1c31d2cbab7deb811274f473316e1fed48bc2a93707f2f964db86ba2f200d522"
+                  },
+                  {
+                      "path":  "export-html/index.js",
+                      "size":  9942,
+                      "sha256":  "9b7a893c46341d2557ba79dd88307797054577c8789665281d1dfb4134d347a3"
+                  },
+                  {
+                      "path":  "export-html/index.js.map",
+                      "size":  21262,
+                      "sha256":  "f2bf1920c337f74e83454665e5a1af9621cd9e67fbcca9aade7231eb624bf9a7"
+                  },
+                  {
+                      "path":  "export-html/template.css",
+                      "size":  22952,
+                      "sha256":  "8ee19851f8e583277ed396cbb76496687aa556707fdfc1f78d1118bff87c740a"
+                  },
+                  {
+                      "path":  "export-html/template.html",
+                      "size":  2271,
+                      "sha256":  "47d208235b066c856dae69c60281a3b99d164b99be9b81153d880375c9327105"
+                  },
+                  {
+                      "path":  "export-html/template.js",
+                      "size":  80552,
+                      "sha256":  "946bd9e3e8255c1ebb40f806def18007aa9397816291a7bf2ac0e4e99cec07a4"
+                  },
+                  {
+                      "path":  "export-html/tool-renderer.d.ts",
+                      "size":  1457,
+                      "sha256":  "ea982244e87c3568ad7bbb28427b83a19506136b5a498c7b496454338483ffd4"
+                  },
+                  {
+                      "path":  "export-html/tool-renderer.d.ts.map",
+                      "size":  1017,
+                      "sha256":  "2fab18f196e020f0b896b27db7cf790c233f0d0af55de04194e60b5bff137fce"
+                  },
+                  {
+                      "path":  "export-html/tool-renderer.js",
+                      "size":  4598,
+                      "sha256":  "8d3bd1f1b068996fe8f7d003bdb6623284043e1393a2db92ff45aeb9d6c33b9a"
+                  },
+                  {
+                      "path":  "export-html/tool-renderer.js.map",
+                      "size":  9750,
+                      "sha256":  "7bead30f87d1b345c70c66953a517fb51d1e1092089158ad5e92280cc97f6ea8"
+                  },
+                  {
+                      "path":  "export-html/vendor/highlight.min.js",
+                      "size":  121727,
+                      "sha256":  "837a6fa5b0c736b52bbde2b2b6190f305da3fc9ed41681db5321507057b5c846"
+                  },
+                  {
+                      "path":  "export-html/vendor/marked.min.js",
+                      "size":  44640,
+                      "sha256":  "438eedfcf932a414d0d0bfeea32dc365c063563b8ca713b4687fc8f8b501e5e4"
+                  },
+                  {
+                      "path":  "export-html/vendor/marked-cjk-friendly.min.js",
+                      "size":  4754,
+                      "sha256":  "93d2c938754cb24eef5b9ffecc268a98ef6beeb75dad614b0e874176aeeba565"
+                  },
+                  {
+                      "path":  "native/win32/prebuilds/win32-x64/win32-platform.node",
+                      "size":  8704,
+                      "sha256":  "51bee02bcb73b165ab92af75ae15b88aba3f5d99f072e63ef60af92ffdc4d565"
+                  },
+                  {
+                      "path":  "package.json",
+                      "size":  3873,
+                      "sha256":  "df6883685382d6a914e5797232744c26579fe7db5576ea0e9c859d018ca2d54e"
+                  },
+                  {
+                      "path":  "photon_rs_bg.wasm",
+                      "size":  1881634,
+                      "sha256":  "10468181565c56004c867f3a4af96f89a0ef5a63a72f2b5fb12c1f1992a3615c"
+                  },
+                  {
+                      "path":  "pi.exe",
+                      "size":  111354880,
+                      "sha256":  "af1d8e3ad5bf00e527cef1e7405fb8e6fd5c24fedbd65f3f0ff2caf4a5a47d7b"
+                  },
+                  {
+                      "path":  "README.md",
+                      "size":  4080,
+                      "sha256":  "fbc7abec7d0829ac8bc4b217e950794e1ba4d8d1b3e0850f970da318ad72e863"
+                  },
+                  {
+                      "path":  "theme/dark.json",
+                      "size":  2250,
+                      "sha256":  "e1f96982f8cb7d2a48eca7db03c9cb282cb1e14a243680cd855638ecd6a251b6"
+                  },
+                  {
+                      "path":  "theme/light.json",
+                      "size":  2248,
+                      "sha256":  "2dee6a4be7f765e7fd7728166b7ebf8c29e4ce313f8ec6b38ae50699e3abc2f3"
+                  }
+              ]
+}

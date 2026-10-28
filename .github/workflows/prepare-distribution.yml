@@ -1,0 +1,157 @@
+name: Prepare source-bearing distribution
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      max_source_mib:
+        description: 'Source download budget in MiB (maximum 2048)'
+        default: '1800'
+        required: true
+  pull_request:
+    types: [opened, synchronize, reopened]
+    paths:
+      - '.gitattributes'
+      - '.gitignore'
+      - '.github/**'
+      - 'runtime/**'
+      - 'tools/**'
+      - 'updater/**'
+      - 'licenses/**'
+      - 'tests/**'
+      - 'docs/**'
+      - '*.md'
+      - '*.bat'
+permissions:
+  contents: read
+concurrency:
+  group: prepare-distribution-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+jobs:
+  sources:
+    if: github.event_name == 'workflow_dispatch' || (github.event_name == 'push' && github.ref_name == github.event.repository.default_branch) || github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-24.04
+    timeout-minutes: 40
+    env:
+      GIT_LFS_SKIP_SMUDGE: '1'
+      SOURCE_BUDGET: ${{ inputs.max_source_mib || '1800' }}
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          fetch-depth: 1
+          lfs: false
+          persist-credentials: false
+      - name: Refuse invalid source and release handoff fixtures before downloads
+        shell: bash
+        run: |
+          python tests/Test-Distribution.py
+          python tests/Test-ReleaseReady.py
+      - name: Collect only reviewed, fixed-version corresponding sources
+        shell: bash
+        run: |
+          if ! [[ "$SOURCE_BUDGET" =~ ^[0-9]{1,4}$ ]]; then exit 1; fi
+          if ! (( 10#$SOURCE_BUDGET > 0 && 10#$SOURCE_BUDGET <= 2048 )); then exit 1; fi
+          python .github/scripts/Distribution.py collect --root . --output "$RUNNER_TEMP/corresponding-source" --cache "$RUNNER_TEMP/source-cache" --max-source-mib "$SOURCE_BUDGET"
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: corresponding-source-${{ github.run_id }}
+          path: ${{ runner.temp }}/corresponding-source/
+          if-no-files-found: error
+          compression-level: 0
+          retention-days: 1
+  windows-candidate:
+    needs: sources
+    runs-on: windows-2022
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          fetch-depth: 1
+          lfs: true
+          persist-credentials: false
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4
+        with:
+          name: corresponding-source-${{ github.run_id }}
+          path: ${{ runner.temp }}/corresponding-source
+      - name: Verify native payload, sources and create a pristine public export
+        shell: powershell
+        run: |
+          $ErrorActionPreference = 'Stop'
+          if ($PSVersionTable.PSVersion.Major -ne 5 -or $PSVersionTable.PSVersion.Minor -ne 1) { throw 'Windows PowerShell 5.1 required.' }
+          . .\updater\scripts\Portable.Release.ps1
+          $root = (Get-Location).Path
+          $git = (Get-Command git.exe -CommandType Application | Select-Object -First 1).Source
+          Assert-ReleaseLfs $root $git
+          Assert-PortableDistribution $root -Native
+          & ./.github/scripts/Update-Licenses.ps1 -Root $root
+          python .github/scripts/Distribution.py verify --root . --sources "$env:RUNNER_TEMP/corresponding-source"
+          if ($LASTEXITCODE) { throw 'Corresponding source verification failed.' }
+          python .github/scripts/Distribution.py stage --root . --output "$env:RUNNER_TEMP/public-export/Pi-Portable"
+          if ($LASTEXITCODE) { throw 'Pristine export failed.' }
+      - name: Existing native tests on an isolated Chinese and space path copy
+        shell: powershell
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $pristine = Join-Path $env:RUNNER_TEMP 'public-export/Pi-Portable'
+          $testRoot = Join-Path $env:RUNNER_TEMP 'PiPortable public 中文 space'
+          Copy-Item -LiteralPath $pristine -Destination $testRoot -Recurse
+          . (Join-Path $testRoot 'updater/scripts/Portable.Release.ps1')
+          $ps = Join-Path $env:SystemRoot 'System32/WindowsPowerShell/v1.0/powershell.exe'
+          $out = Join-Path $env:RUNNER_TEMP 'public-test-results'
+          [void][IO.Directory]::CreateDirectory($out)
+          function Child([string]$File,[string[]]$Arguments=@(),[int]$Timeout=900) {
+            $result = Invoke-PortableNative $ps (@('-NoProfile','-NonInteractive','-ExecutionPolicy','Bypass','-File',(Join-Path $testRoot $File)) + $Arguments) $Timeout $testRoot
+            Write-Host $result.Stdout
+          }
+          Child 'updater/scripts/Entry.ps1' @('-Action','Check') 300
+          Child 'updater/scripts/Entry.ps1' @('-Action','Repair') 300
+          Child 'updater/scripts/Entry.ps1' @('-Action','Launch','--version') 120
+          Child 'tests/Test-Windows.ps1' @('-Relocation','-QuickCI','-OutputDirectory',$out) 900
+          Child 'tests/Test-Package.ps1' @('-OutputDirectory',$out) 300
+          Child 'tests/Test-ReleasePipeline.ps1' @('-OutputDirectory',$out,'-GitPath',(Get-Command git.exe -CommandType Application | Select-Object -First 1).Source) 600
+          python (Join-Path $testRoot 'tests/Test-Distribution.py')
+          if ($LASTEXITCODE) { throw 'Distribution negative tests failed.' }
+          python (Join-Path $testRoot 'tests/Test-ReleaseReady.py')
+          if ($LASTEXITCODE) { throw 'Release handoff negative tests failed.' }
+          Assert-PortableDistribution $testRoot -Native
+      - name: Full public gate, redacted secret scan and verified combined ZIP
+        shell: powershell
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $root = Join-Path $env:RUNNER_TEMP 'public-export/Pi-Portable'
+          $sources = Join-Path $env:RUNNER_TEMP 'corresponding-source'
+          $out = Join-Path $env:RUNNER_TEMP 'public-candidate'
+          python .github/scripts/Distribution.py package --root $root --sources $sources --output $out
+          if ($LASTEXITCODE) { throw 'Combined binary/source ZIP verification failed.' }
+          $run = "$env:GITHUB_SERVER_URL/$env:GITHUB_REPOSITORY/actions/runs/$env:GITHUB_RUN_ID"
+          python .github/scripts/Release-Ready.py prepare --root $root --directory $out --commit $env:GITHUB_SHA --run-url $run
+          if ($LASTEXITCODE) { throw 'Release handoff verification failed.' }
+      - name: Preserve verified assets ready for the owner to publish
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: Pi-Portable-release-ready-${{ github.run_id }}
+          path: ${{ runner.temp }}/public-candidate/
+          if-no-files-found: error
+          compression-level: 0
+          retention-days: 7
+      - name: Preserve small release notes and checksum metadata separately
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: release-ready-metadata-${{ github.run_id }}
+          path: |
+            ${{ runner.temp }}/public-candidate/RELEASE-NOTES.md
+            ${{ runner.temp }}/public-candidate/SHA256SUMS.txt
+            ${{ runner.temp }}/public-candidate/release-ready.json
+            ${{ runner.temp }}/public-candidate/public-distribution-summary.json
+            ${{ runner.temp }}/public-candidate/secret-scan-summary.json
+          if-no-files-found: error
+          retention-days: 7
+      - name: Preserve native test summaries
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: public-candidate-tests-${{ github.run_id }}
+          path: ${{ runner.temp }}/public-test-results/*.json
+          if-no-files-found: warn
+          retention-days: 7
+

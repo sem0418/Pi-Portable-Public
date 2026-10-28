@@ -1,0 +1,46 @@
+name: Windows validation
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+  pull_request:
+    types: [opened, synchronize, reopened]
+    paths-ignore:
+      - 'docs/**'
+      - '*.md'
+      - 'licenses/*.md'
+permissions:
+  contents: read
+concurrency:
+  group: windows-validation-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+jobs:
+  native-windows:
+    runs-on: windows-2022
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          lfs: true
+          fetch-depth: 1
+          persist-credentials: false
+      - name: Windows PowerShell 5.1, bundled runtimes and existing tests
+        shell: powershell
+        run: ./.github/scripts/Invoke-Validation.ps1
+      - name: Release handoff corruption and mismatch refusal
+        shell: powershell
+        run: |
+          python tests/Test-ReleaseReady.py
+          if ($LASTEXITCODE) { throw 'Release handoff negative tests failed.' }
+      - name: Preserve test summaries and execution log (no user-data archive)
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: windows-validation-${{ github.run_id }}-${{ github.run_attempt }}
+          path: |
+            ${{ runner.temp }}/PiPortable-results/test-*.json
+            ${{ runner.temp }}/PiPortable-results/*summary.json
+            ${{ runner.temp }}/PiPortable-results/execution.log
+          if-no-files-found: warn
+          retention-days: 7
+

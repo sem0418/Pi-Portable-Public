@@ -1,0 +1,159 @@
+name: Initialize audited public release
+on:
+  workflow_dispatch:
+    inputs:
+      audit_url:
+        description: Temporary download URL for the audited clean snapshot artifact
+        required: true
+      metadata_url:
+        description: Temporary download URL for the matching verified release metadata
+        required: true
+      part0_url:
+        description: Verified ZIP part 00 transport URL
+        required: true
+      part1_url:
+        description: Verified ZIP part 01 transport URL
+        required: true
+      part2_url:
+        description: Verified ZIP part 02 transport URL
+        required: true
+      part3_url:
+        description: Verified ZIP part 03 transport URL
+        required: true
+      part4_url:
+        description: Verified ZIP part 04 transport URL
+        required: true
+permissions:
+  contents: write
+concurrency:
+  group: initialize-public-release
+  cancel-in-progress: false
+jobs:
+  initialize:
+    if: github.repository == 'sem0418/Pi-Portable-Public' && github.event.repository.private
+    runs-on: ubuntu-24.04
+    timeout-minutes: 40
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GIT_LFS_SKIP_SMUDGE: '1'
+      AUDIT_URL: ${{ inputs.audit_url }}
+      METADATA_URL: ${{ inputs.metadata_url }}
+      PART0_URL: ${{ inputs.part0_url }}
+      PART1_URL: ${{ inputs.part1_url }}
+      PART2_URL: ${{ inputs.part2_url }}
+      PART3_URL: ${{ inputs.part3_url }}
+      PART4_URL: ${{ inputs.part4_url }}
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+          lfs: false
+      - name: Import only the pinned, audited snapshot and verify every release asset
+        shell: python
+        run: |
+          import hashlib, json, os, re, shutil, subprocess, tempfile, time
+          import urllib.parse, urllib.request, zipfile
+          from pathlib import Path
+          seed = Path.cwd()
+          repo = os.environ['GITHUB_REPOSITORY']
+          assert repo == 'sem0418/Pi-Portable-Public'
+          def run(*args, cwd=None, capture=False):
+              return subprocess.check_output(args, cwd=cwd, text=True).strip() if capture else subprocess.check_call(args, cwd=cwd)
+          # This initializer cannot overwrite an existing imported release.
+          assert run('git', 'rev-list', '--count', 'HEAD', capture=True) in ('2', '3', '4', '5', '6', '7', '8'), 'Expected only initial preparation commits'
+          assert not json.loads(run('gh', 'api', f'repos/{repo}/releases', capture=True)), 'A release already exists'
+          head = run('git', 'rev-parse', 'HEAD', capture=True)
+          assert head == os.environ['GITHUB_SHA']
+          work = Path(tempfile.mkdtemp(prefix='verified-release-'))
+          ready = work/'ready'; ready.mkdir()
+          def download(key, target):
+              url = os.environ[key]
+              parsed = urllib.parse.urlparse(url)
+              assert parsed.scheme == 'https' and parsed.hostname.endswith('.oaiusercontent.com') and not parsed.username
+              print('::add-mask::'+url, flush=True)
+              for attempt in range(3):
+                  try:
+                      with urllib.request.urlopen(url, timeout=120) as source, target.open('wb') as dest:
+                          shutil.copyfileobj(source, dest)
+                      return
+                  except Exception:
+                      if attempt == 2: raise RuntimeError('Asset transport failed for '+key) from None
+                      time.sleep(2)
+          download('AUDIT_URL', work/'audit.zip')
+          with zipfile.ZipFile(work/'audit.zip') as z:
+              names = [n for n in z.namelist() if n == 'clean-history.bundle']
+              assert len(names) == 1
+              (work/'clean.bundle').write_bytes(z.read(names[0]))
+          clean = work/'clean'
+          run('git', 'clone', str(work/'clean.bundle'), str(clean))
+          assert run('git', 'rev-parse', 'HEAD', cwd=clean, capture=True) == '82b2c808ff1aa9255353cc15bbd331bee2ee99c0'
+          assert run('git', 'rev-list', '--count', '--all', cwd=clean, capture=True) == '1'
+          run('git', 'fsck', '--full', cwd=clean)
+          download('METADATA_URL', work/'metadata.zip')
+          with zipfile.ZipFile(work/'metadata.zip') as z:
+              expected = {'RELEASE-NOTES.md','SHA256SUMS.txt','release-ready.json','public-distribution-summary.json','secret-scan-summary.json'}
+              assert set(z.namelist()) == expected
+              for name in expected: (ready/name).write_bytes(z.read(name))
+          archive = ready/'Pi-Portable-1.1.1-win-x64.zip'
+          with archive.open('wb') as dest:
+              for i in range(5):
+                  transport = work/f'part-{i}.zip'
+                  download(f'PART{i}_URL', transport)
+                  with zipfile.ZipFile(transport) as z:
+                      assert z.namelist() == [f'part-{i:02}.bin']
+                      with z.open(z.namelist()[0]) as data: shutil.copyfileobj(data, dest)
+                  transport.unlink()
+                  print(f'Verified transport part {i+1}/5', flush=True)
+          assert archive.stat().st_size == 1951743278
+          assert hashlib.file_digest(archive.open('rb'),'sha256').hexdigest() == '128365c278e0bf3295dfb517f6aeb9217d2f4767466a6a9c78de79fef70d83a9'
+          run('python', str(clean/'.github/scripts/Release-Ready.py'), 'verify', '--directory', str(ready))
+          # Keep exactly the same workflow bytes on both sides of the history transition.
+          # No temporary URLs or credentials are written into Git objects.
+          for source in (seed/'.github/workflows').glob('*.yml'):
+              target = clean/'.github/workflows'/source.name
+              target.parent.mkdir(parents=True, exist_ok=True)
+              shutil.copyfile(source, target)
+          readme = clean/'README.md'
+          readme.write_text(readme.read_text()+'\n\n下载完整发行包：[Releases](https://github.com/sem0418/Pi-Portable-Public/releases/latest)。\n', encoding='utf-8')
+          english = clean/'README.en.md'
+          english.write_text(english.read_text()+'\n\nDownload the complete runnable bundle from [Releases](https://github.com/sem0418/Pi-Portable-Public/releases/latest).\n', encoding='utf-8')
+          run('git','remote','remove','origin',cwd=clean)
+          run('git','config','user.name','github-actions[bot]',cwd=clean)
+          run('git','config','user.email','41898282+github-actions[bot]@users.noreply.github.com',cwd=clean)
+          run('git','add','README.md','README.en.md','.github/workflows',cwd=clean)
+          run('git','commit','--quiet','--amend','--no-edit','--reset-author',cwd=clean)
+          assert run('git','rev-list','--count','--all',cwd=clean,capture=True) == '1'
+          assert all(e.endswith('@users.noreply.github.com') for e in run('git','log','--all','--format=%ae%n%ce',cwd=clean,capture=True).splitlines())
+          for path in run('git','ls-files','-z',cwd=clean,capture=True).split('\0')[:-1]:
+              assert not path.startswith(('data/','workspace/','.github/private-maintenance/'))
+              assert path not in ('docs/EXECUTION-LOG.md','docs/PRIVACY-MAINTENANCE.md','.github/workflows/privacy-audit.yml')
+          # Materialize the four LFS objects from the already-verified runnable ZIP.
+          lfs_count = 0
+          with zipfile.ZipFile(archive) as z:
+              for path in run('git','ls-files','-z',cwd=clean,capture=True).split('\0')[:-1]:
+                  file = clean/path
+                  if file.stat().st_size > 1024: continue
+                  pointer = re.fullmatch(rb'version https://git-lfs.github.com/spec/v1\noid sha256:([0-9a-f]{64})\nsize ([0-9]+)\n',file.read_bytes())
+                  if not pointer: continue
+                  oid, size = pointer[1].decode(), int(pointer[2])
+                  obj = clean/'.git/lfs/objects'/oid[:2]/oid[2:4]/oid
+                  obj.parent.mkdir(parents=True, exist_ok=True)
+                  with z.open('Pi-Portable/'+path) as src, obj.open('wb') as dest: shutil.copyfileobj(src,dest)
+                  assert obj.stat().st_size == size and hashlib.file_digest(obj.open('rb'),'sha256').hexdigest() == oid
+                  lfs_count += 1
+          assert lfs_count == 4
+          run('gh','auth','setup-git','--hostname','github.com')
+          run('git','remote','add','origin',f'https://github.com/{repo}.git',cwd=clean)
+          run('git','lfs','install','--local',cwd=clean)
+          run('git','lfs','fsck',cwd=clean)
+          run('git','lfs','push','--all','origin','main',cwd=clean)
+          run('git','push',f'--force-with-lease=refs/heads/main:{head}','origin','main:refs/heads/main',cwd=clean)
+          run('git','push','origin','main:refs/tags/v1.1.1',cwd=clean)
+          public_head = run('git','rev-parse','HEAD',cwd=clean,capture=True)
+          run('gh','release','create','v1.1.1','--repo',repo,'--draft','--verify-tag','--title','Pi-Portable 1.1.1 (Windows x64)','--notes-file',str(ready/'RELEASE-NOTES.md'))
+          names = ['Pi-Portable-1.1.1-win-x64.zip','SHA256SUMS.txt','RELEASE-NOTES.md','public-distribution-summary.json','secret-scan-summary.json']
+          run('gh','release','upload','v1.1.1','--repo',repo,*[str(ready/n) for n in names])
+          result = {'publicCommit':public_head,'reachableCommits':1,'lfsObjects':lfs_count,'releaseTag':'v1.1.1','releaseDraft':True,'verifiedArchiveSHA256':'128365c278e0bf3295dfb517f6aeb9217d2f4767466a6a9c78de79fef70d83a9'}
+          print(json.dumps(result,indent=2))
+          with open(os.environ['GITHUB_STEP_SUMMARY'],'a') as summary: summary.write('```json\n'+json.dumps(result,indent=2)+'\n```\n')

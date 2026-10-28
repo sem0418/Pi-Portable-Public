@@ -1,0 +1,22 @@
+# User-owned data, credentials, sessions, custom skills and workspaces
+/data/
+/workspace/
+# Maintenance state; release manifests remain tracked
+/updater/downloads/
+/updater/backups/
+/updater/staging/
+/updater/logs/
+/updater/sync-tools/
+/updater/sync-backups/
+/updater/operation.lock
+/updater/transaction.json*
+/updater/git-initialized.json*
+/updater/*.json.previous
+/updater/manifests/*.previous
+/updater/manifests/*.tmp-*
+/tests/results/
+*.partial
+# Do not ignore tools/git or tools/node/node_modules: they are release payloads.
+
+/licenses/*.previous
+/licenses/*.tmp-*

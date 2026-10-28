@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "components": [
+    {
+      "name": "pi",
+      "version": "1.4.0",
+      "tag": "v1.4.0",
+      "archiveUrl": "https://github.com/earendil-works/pi/releases/download/v1.4.0/pi-windows-x64.zip",
+      "archiveSHA256": "0f7256ea8bdac3af20012b94fdc1252a31cc6dc0d2f9b9eb539555d22e3e321b",
+      "sourceReference": "https://github.com/earendil-works/pi/tree/v1.4.0"
+    },
+    {
+      "name": "node",
+      "version": "24.22.1",
+      "tag": "v24.22.1",
+      "archiveUrl": "https://nodejs.org/dist/v24.22.1/node-v24.22.1-win-x64.zip",
+      "archiveSHA256": "d2046d28c2c3dcd211ac5145c0bf30e2047ef9dfb306693c8c6e2eccd8b95fa5",
+      "sourceReference": "https://nodejs.org/dist/v24.22.1/node-v24.22.1.tar.gz"
+    },
+    {
+      "name": "git",
+      "version": "2.56.0.3",
+      "tag": "v2.56.0.windows.3",
+      "archiveUrl": "https://github.com/git-for-windows/git/releases/download/v2.56.0.windows.3/PortableGit-2.56.0.3-64-bit.7z.exe",
+      "archiveSHA256": "4fc27b779829a36df77911e3f4dea09c66c790dd6c5f7dfa3b6a5479f1fe354f",
+      "sourceReference": "https://github.com/git-for-windows/git/tree/v2.56.0.windows.3"
+    }
+  ],
+  "gitPackageListSHA256": "2aa56fb4efaa21eb7179ff190a3b38f4d48a7e7f336ea80601c051874a2468a6",
+  "correspondingSourceStatus": "exact-inventory-pinned-source-bytes-and-public-candidate-validation-required",
+  "sourceInventorySHA256": "f1c6a12a6b2222253b1aedbd14184fd437ac39e5f237f94407d488793ab53043"
+}
